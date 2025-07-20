@@ -55,6 +55,8 @@ To get a local copy up and running, follow these simple steps.
     pydantic
     python-dotenv
     google-generativeai
+    pandas==1.5.3
+
     ```
     Then, run the command:
     ```sh
