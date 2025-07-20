@@ -143,7 +143,7 @@ function App() {
   useEffect(() => {
     const savedEntries = localStorage.getItem('asha-journal');
     const savedMoodHistory = localStorage.getItem('asha-mood-history');
-    // ... (rest of your localStorage loading is fine)
+
     if (savedEntries) setJournalEntries(JSON.parse(savedEntries));
     if (savedMoodHistory) setMoodHistory(JSON.parse(savedMoodHistory));
   }, []);
@@ -284,7 +284,7 @@ const playResponse = (text: string) => {
     setSliderPosition(position);
     setIsSliding(true);
     
-    // Map position to emoji
+
     const emojiIndex = Math.floor((position / 100) * emojiOptions.length);
     const clampedIndex = Math.min(emojiIndex, emojiOptions.length - 1);
     setSelectedEmoji(emojiOptions[clampedIndex].emoji);
@@ -304,7 +304,7 @@ const playResponse = (text: string) => {
         });
       }
       
-      // Hide burst after animation
+
       setTimeout(() => {
         setShowBurst(false);
         setCurrentView('wisdom');
@@ -329,7 +329,7 @@ const playResponse = (text: string) => {
       setJournalEntries(updatedEntries);
       localStorage.setItem('asha-journal', JSON.stringify(updatedEntries));
       
-      // Save feedback data
+
       const feedbackData: FeedbackData = {
         id: Date.now().toString(),
         emoji: currentFeedback.emoji,
@@ -343,7 +343,7 @@ const playResponse = (text: string) => {
       setFeedbackHistory(updatedFeedback);
       localStorage.setItem('asha-feedback-history', JSON.stringify(updatedFeedback));
       
-      // Reset feedback state
+
       setCurrentFeedback(null);
       setSelectedEmoji('');
       setSliderPosition(50);
@@ -518,7 +518,7 @@ const playResponse = (text: string) => {
               </div>
             </div>
 
-            {/* Bottom Navigation */}
+            
             <div className="flex justify-around bg-white/50 backdrop-blur-sm rounded-2xl p-3 shadow-lg">
               <button 
                 onClick={() => setCurrentView('home')}
@@ -740,7 +740,7 @@ const playResponse = (text: string) => {
                     </div>
                   </div>
                   
-                  {/* Emoji indicators */}
+                  
                   <div className="flex justify-between mt-4 px-2">
                     {emojiOptions.map((option, index) => (
                       <div key={index} className="text-center">
@@ -1190,10 +1190,10 @@ const playResponse = (text: string) => {
 
   return (
     <div className="min-h-screen relative overflow-hidden flex items-center justify-center p-4">
-      {/* Enhanced Animated Background */}
+      
       <div className="absolute inset-0 bg-gradient-to-br from-violet-400 via-purple-300 via-pink-300 via-rose-300 to-orange-300"></div>
       
-      {/* Multiple Floating Orbs with Different Animations */}
+      
       <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-br from-pink-400/30 to-rose-400/30 rounded-full blur-xl animate-float"></div>
       <div className="absolute top-32 right-16 w-24 h-24 bg-gradient-to-br from-purple-400/40 to-violet-400/40 rounded-full blur-lg animate-float" style={{ animationDelay: '1s' }}></div>
       <div className="absolute bottom-32 left-20 w-40 h-40 bg-gradient-to-br from-orange-300/25 to-pink-300/25 rounded-full blur-2xl animate-float" style={{ animationDelay: '2s' }}></div>
@@ -1201,11 +1201,11 @@ const playResponse = (text: string) => {
       <div className="absolute top-1/2 left-4 w-20 h-20 bg-gradient-to-br from-rose-400/30 to-orange-400/30 rounded-full blur-lg animate-float" style={{ animationDelay: '1.5s' }}></div>
       <div className="absolute top-1/4 right-8 w-36 h-36 bg-gradient-to-br from-violet-300/20 to-pink-300/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '2.5s' }}></div>
       
-      {/* Additional Smaller Orbs */}
+      
       <div className="absolute top-20 left-1/2 w-16 h-16 bg-gradient-to-br from-cyan-400/25 to-blue-400/25 rounded-full blur-md animate-float" style={{ animationDelay: '3s' }}></div>
       <div className="absolute bottom-40 left-1/3 w-12 h-12 bg-gradient-to-br from-yellow-400/30 to-orange-400/30 rounded-full blur-sm animate-float" style={{ animationDelay: '1.8s' }}></div>
       
-      {/* Subtle Mesh Gradient Overlays */}
+      
       <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent"></div>
       <div className="absolute inset-0 bg-gradient-to-bl from-purple-500/5 via-transparent to-orange-500/5"></div>
       <div className="absolute inset-0 bg-gradient-to-tl from-pink-500/5 via-transparent to-blue-500/5"></div>
@@ -1215,7 +1215,7 @@ const playResponse = (text: string) => {
       <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-pink-200/30 to-transparent animate-shimmer" style={{ animationDelay: '1s' }}></div>
       <div className="absolute top-0 left-2/3 w-px h-full bg-gradient-to-b from-transparent via-purple-200/25 to-transparent animate-shimmer" style={{ animationDelay: '2s' }}></div>
 
-      {/* Burst Animation */}
+      
       {renderBurstAnimation()}
 
       <div className="w-full max-w-sm mx-auto relative z-10">
