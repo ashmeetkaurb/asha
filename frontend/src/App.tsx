@@ -205,6 +205,13 @@ function App() {
       setSpeechText("Speak now...");
       setIsListening(true);
       recognitionRef.current.start();
+
+      setTimeout(() => {
+      recognitionRef.current?.stop();
+      setIsListening(false);
+      setSpeechText("Auto-stopped after 10 seconds.");
+      console.log("🛑 Recognition auto-stopped.");
+    }, 10000); // 10000 ms = 10 seconds
     }
   };
 
