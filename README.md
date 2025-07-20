@@ -87,7 +87,7 @@ To get a local copy up and running, follow these simple steps.
 3.  **Set Up Environment Variables**
     Create a file named `.env` in the frontend directory and add the following line to connect it to your local backend:
     ```
-    VITE_API_BASE_URL="https://asha-backend-twa0.onrender.com"
+    VITE_API_BASE_URL="https://086231bab7da.ngrok-free.app"
     ```
 
 4.  **Run the Frontend App**
@@ -96,16 +96,29 @@ To get a local copy up and running, follow these simple steps.
     ```
     The app will be running at `http://localhost:5173`. Open this URL in your browser.
 
-## Live Demo
+### Notes on ngrok
 
-- **Frontend** (Vercel): https://asha-sigma.vercel.app 
-- **Backend** (Render): https://asha-sphere-api.onrender.com
+To expose your local app for testing:
+
+1. Start backend and frontend locally as shown.
+2. In a terminal, run:
+    ```sh
+    ngrok start --all --config path/to/ngrok.yml
+    ```
+3. Use the ngrok URLs in your frontend `.env` and to share your app.
+
+
+
+## Live Demo (via ngrok - temporary)
+
+- **Frontend**: [https://eef0722a90c7.ngrok-free.app](https://eef0722a90c7.ngrok-free.app)
+- **Backend**: [https://086231bab7da.ngrok-free.app](https://086231bab7da.ngrok-free.app)
+
+⚠️ Note: These links are only active while I'm running the tunnels locally. If the links don't work, please clone the repo and run it locally using the setup.
+
 
 ## Test It:
 Try journaling a thought and receive a response from the AI!
-
-## Note:
-Deployment servers (Render) may sleep if inactive for a while. Wait 20–30 seconds if the backend takes time to respond initially.
 
 
 ### Notes on Privacy
@@ -127,4 +140,4 @@ If you're reviewing this for a hackathon or collaboration:
 
 **Ashmeet Kaur**
 
-GitHub Profile : ashmeetkb10@gmail.com (registered in the hackathon by akaur5_be22@thapar.edu)
+GitHub Profile : ashmeetkb10@gmail.com (registered in the hackathon as akaur5_be22@thapar.edu)

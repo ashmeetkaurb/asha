@@ -1,0 +1,9 @@
+version: 2
+authtoken: 3094eQqLVYG3zT9vjn4sWIXek50_3ane44CrC3tar9LmENedJ  # remove this line if already set
+tunnels:
+  backend:
+    proto: http
+    addr: 8000
+  frontend:
+    proto: http
+    addr: 5173
